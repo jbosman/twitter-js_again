@@ -6,14 +6,17 @@ function ServerMessage(string){
 	console.log(string);
 }
 
+app.use("/", function( req, res, next) {
+	ServerMessage("Received request on "+ req.url  + " and responding...");
+	next();
+});
+
 app.get("/", function( req, res){
-	ServerMessage("Received request on \"\/\" and responding...");
 	res.send("Hello world!");
 	res.end();
 });
 
 app.get("/news", function( req, res){
-	ServerMessage("Received request on \"\/news\" and responding...");
 	res.send("Welcome to the news section.");
 	res.end();
 });
