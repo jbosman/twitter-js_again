@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jbosman/twitter-js_again#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "chalk": "^1.1.3",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
   }
 }

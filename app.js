@@ -1,15 +1,21 @@
 var express = require('express');
+var chalk = require('chalk');
+var morgan = require('morgan');
 
 var app = express();
 
 function ServerMessage(string){
-	console.log(string);
+	console.log(chalk.blue(string));
 }
 
 app.use("/", function( req, res, next) {
-	ServerMessage("Received request on "+ req.url  + " and responding...");
+	res.status(200);
+	ServerMessage(	"Received " + chalk.bgMagenta(req.method) + " request on " + 
+					chalk.bgGreen(req.url)  + " and responding with " + chalk.bgMagenta(res.statusCode));
 	next();
 });
+
+app.use( morgan('combined'));
 
 app.get("/", function( req, res){
 	res.send("Hello world!");
