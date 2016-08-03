@@ -1,0 +1,19 @@
+{
+  "name": "twitter-js_again",
+  "version": "1.0.0",
+  "description": "Trying twitter.js lab again.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbosman/twitter-js_again.git"
+  },
+  "author": "Joe Bosman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbosman/twitter-js_again/issues"
+  },
+  "homepage": "https://github.com/jbosman/twitter-js_again#readme"
+}
