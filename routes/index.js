@@ -14,4 +14,8 @@ router.use(express.static('public'));
 // 	res.sendFile("/stylesheets/style.css", { root: __dirname + "/../public/"});
 // });
 
+router.get('/users/:name', function(req, res){
+	res.render('index', { tweets: tweetBank.find({name: req.params.name }) })
+})
+
 module.exports = router;

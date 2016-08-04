@@ -23,9 +23,6 @@ function ServerMessage(string){
 }
 
 app.use("/", function( req, res, next) {
-	ServerMessage("Request info:");
-	ServerMessage(	chalk.bgMagenta(req.method) + "  " + chalk.bgGreen(req.url) + "  " +  chalk.bgMagenta(req.statusCode));
-	ServerMessage("Response info:")
 	ServerMessage(	chalk.bgMagenta(req.method) + "  " + chalk.bgGreen(req.url) + "  " +  chalk.bgMagenta(res.statusCode));
 	next();
 });
